@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Person;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +13,40 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         $this->call(UsersTableSeeder::class);
+
+        $people = [
+            [
+                'age' => 10,
+                'name' => 'Alicia',
+                'occupation' => 'Being a child',
+            ],
+
+            [
+                'age' => 20,
+                'name' => 'George',
+                'occupation' => 'Student',
+            ],
+
+            [
+                'age' => 45,
+                'name' => 'Martin',
+                'occupation' => 'Midlife crisis',
+            ],
+            [
+                'age' => 45,
+                'name' => 'Shelly',
+                'occupation' => 'Developers',
+            ],
+            [
+                'age' => 100,
+                'name' => 'Harry',
+                'occupation' => 'Being a badass',
+            ],
+        ];
+
+
+        collect($people)->each(function($person) {
+            Person::create($person);
+        });
     }
 }
