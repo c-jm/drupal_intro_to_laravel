@@ -40,3 +40,9 @@ Route::get('/hello_drupal/numbers', function() {
 
     return view('numbers', ['numbers' => $numbers]);
 });
+
+
+/** Models and Databases **/
+Route::post('/people', 'PeopleController@create');
+Route::get('/people',  'PeopleController@index');
+Route::get('/people/{id}', 'PeopleController@show');
