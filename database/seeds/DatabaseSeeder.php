@@ -38,9 +38,14 @@ class DatabaseSeeder extends Seeder
                 'occupation' => 'Developers',
             ],
             [
-                'age' => 100,
-                'name' => 'Harry',
+                'age' => 79,
+                'name' => 'Dennis Ritchie',
                 'occupation' => 'Being a badass',
+            ],
+            [
+                'age' => 79,
+                'name' => 'Harriot',
+                'occupation' => 'Testing',
             ],
         ];
 

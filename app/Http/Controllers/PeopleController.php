@@ -25,8 +25,12 @@ class PeopleController extends Controller
 
     public function index()
     {
-        $result = Person::all();
-
-        return $result;
+        return Person::all();
     }
+
+    public function peopleByAge($age)
+    {
+        return Person::where('age', '=', $age)->orderBy('asc')->get()->all();
+    }
+
 }
